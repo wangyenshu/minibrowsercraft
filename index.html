@@ -85,8 +85,8 @@
 
     <script>
         const pathJarMinecraft = '/files/client_1.2.5.jar';
-        const urlDownloadMinecraft = 'https://piston-data.mojang.com/v1/objects/4a2fac7504182a97dcbcd7560c6392d7c8139928/client.jar';
-        const pathJarLibs = `/app/lwjgl/lwjgl-2.9.3.jar:/app/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
+        const urlDownloadMinecraft = 'client.jar';
+        const pathJarLibs = `/app/minibrowsercraft/lwjgl/lwjgl-2.9.3.jar:/app/minibrowsercraft/lwjgl/lwjgl_util-2.9.3.jar:${pathJarMinecraft}`;
 
         const loading = document.getElementById('loading');
         const display = document.getElementById('display');
@@ -100,8 +100,8 @@
         async function startCheerpJ() {
             await cheerpjInit({
                 version: 8,
-                javaProperties: ['java.library.path=/app/lwjgl/libraries/'],
-                libraries: { 'libGL.so.1': '/app/lwjgl/libraries/gl4es.wasm' },
+                javaProperties: ['java.library.path=/app/minibrowsercraft/lwjgl/libraries/'],
+                libraries: { 'libGL.so.1': '/app/minibrowsercraft/lwjgl/libraries/gl4es.wasm' },
                 enableX11: true,
                 preloadResources: {
                     '/lt/8/jre/lib/rt.jar': [
