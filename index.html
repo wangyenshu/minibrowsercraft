@@ -100,8 +100,8 @@
         async function startCheerpJ() {
             await cheerpjInit({
                 version: 8,
-                javaProperties: ['java.library.path=/app/minibrowsercraft/lwjgl/libraries/'],
-                libraries: { 'libGL.so.1': '/app/minibrowsercraft/lwjgl/libraries/gl4es.wasm' },
+                javaProperties: ['java.library.path=/app/minibrowsercraft/lwjgl/libraries/', 'org.lwjgl.librarypath=/app/minibrowsercraft/lwjgl/libraries/'],
+                libraries: { 'libGL.so.1': '/app/minibrowsercraft/lwjgl/libraries/gl4es.wasm', 'liblwjgl.so': '/app/minibrowsercraft/lwjgl/libraries/liblwjgl.so' },
                 enableX11: true,
                 preloadResources: {
                     '/lt/8/jre/lib/rt.jar': [
